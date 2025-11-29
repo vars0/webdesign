@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  color: #333;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.headerSub {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.logo {
+  width: 300px;
+  height: 100px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  width: 300px;
+  position: relative;
+  top: 25px;
+}
+
+.menu {
+  display: flex;
+  text-align: center;
+  height: 105px;
+}
+.mainMenu {
+  display: flex;
+  flex-direction: row;
+}
+.mainMenu li {
+  width: 100px;
+}
+
+.subMenu {
+  position: absolute;
+  width: 1200px;
+  top: 0;
+  left: 0;
+  display: flex;
+}
+
+.slide {
+  width: 1200px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.slide img {
+  width: 100%;
+  position: absolute;
+}
+.S1 {
+  animation: fade1 8s infinite;
+}
+.S2 {
+  animation: fade2 8s infinite;
+}
+.S3 {
+  animation: fade3 8s infinite;
+}
+@keyframes fade1 {
+  00% {
+    opacity: 1;
+  }
+  22% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0;
+  }
+  88% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade2 {
+  00% {
+    opacity: 0;
+  }
+  22% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade3 {
+  00% {
+    opacity: 0;
+  }
+  55% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 1;
+  }
+  88% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.content {
+  width: 1200px;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.content > div {
+  width: 400px;
+}
+
+.footer {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.footerSub {
+  display: flex;
+  width: 1200px;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+}
+.footerR {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+.Dmenu{
+  display: flex;
+  justify-content: space-around;
+}
