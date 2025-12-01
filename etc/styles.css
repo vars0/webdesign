@@ -1,0 +1,26 @@
+/* 라디오 숨김 */
+input[name="C1C2"] {
+  display: none;
+}
+
+/* 기본 Cbody 숨김 */
+.Cbody {
+  display: none;
+}
+
+/* 체크된 탭의 콘텐츠만 표시 */
+input[name="C1C2"]:checked + label + .Cbody {
+  display: block;
+}
+
+/* 탭 스타일 (선택됨/비선택됨) */
+.tab-label h2 {
+  cursor: pointer;
+  padding: 10px;
+}
+
+input[name="C1C2"]:checked + label h2 {
+  color: #333;
+  font-weight: bold;
+  border-bottom: 2px solid black;
+}
