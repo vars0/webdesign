@@ -70,7 +70,6 @@ body {
   justify-content: center;
 }
 .menu > div:hover > .submenu {
-  pointer-events: auto;
   width: 200px;
 }
 .submenu a:hover {
