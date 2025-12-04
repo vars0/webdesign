@@ -1,16 +1,4 @@
-/* 형제선택자: + 
-메뉴목록
-height: auto;
-  pointer-events: auto;
-  visibility: visible;
-  opacity: 1;
-
-
-  visibility: hidden;
-  height: 0;
-  opacity: 0;
-  transition: 0.3s;
-*/
+@charset "utf-8";
 
 * {
   margin: 0;
@@ -26,6 +14,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: #fff;
+  color: #333;
 }
 
 .header {
@@ -34,6 +24,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  background-color: rgba(130, 128, 221, 0.384);
 }
 .headerSub {
   width: 1200px;
@@ -69,23 +60,28 @@ body {
   display: flex;
   flex-direction: row;
 }
-.mainMenu a {
+.mainMenu > * {
   width: 100px;
   padding: 10px;
+  transition: 0.3s;
 }
-
+.mainMenu > *:hover {
+  background-color: rgb(130, 128, 221);
+}
 .subMenu {
+  position: absolute;
   display: flex;
   flex-direction: row;
+  top: 47px;
 }
 .subMenu div {
-  width: 100px;
-  padding: 0 10px;
+  width: 120px;
   display: flex;
   flex-direction: column;
 }
 .subMenu a {
-  padding: 10px 0;
+  padding: 10px;
+  transition: 0.3s;
 }
 .subMenuBack {
   position: absolute;
@@ -95,6 +91,43 @@ body {
   z-index: -1;
   top: 47px;
   right: -50px;
+}
+.subMenu,
+.subMenuBack {
+  visibility: hidden;
+  transition: 0.3s;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.menu:hover > .subMenu,
+.menu:hover > .subMenuBack {
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+}
+.menu:hover > .subMenuBack {
+  height: 188px;
+}
+.subMenu a:hover {
+  background-color: #fff;
+}
+.subMenu:has(#Ms1:hover) ~ .mainMenu #M1 {
+  background-color: rgb(130, 128, 221);
+} /* Ms2:hover → M2 강조 */
+.subMenu:has(#Ms2:hover) ~ .mainMenu #M2 {
+  background-color: rgb(130, 128, 221);
+}
+
+/* Ms3:hover → M3 강조 */
+.subMenu:has(#Ms3:hover) ~ .mainMenu #M3 {
+  background-color: rgb(130, 128, 221);
+}
+
+/* Ms4:hover → M4 강조 */
+.subMenu:has(#Ms4:hover) ~ .mainMenu #M4 {
+  background-color: rgb(130, 128, 221);
 }
 
 .slide {
@@ -230,9 +263,13 @@ input {
   display: flex;
   border-bottom: #333 1px solid;
 }
-.C1body a {
+.C1body li > * {
   display: flex;
   gap: 30px;
+  align-items: baseline;
+}
+.C1body p {
+  font-size: 12px;
 }
 .C2body {
   border-radius: 20px 20px 20px 20px;
@@ -242,20 +279,18 @@ input {
 #C2:checked ~ .C2body {
   z-index: 10;
 }
-.C2body{
+.C2body {
   display: flex;
   align-items: center;
-    justify-content: space-evenly;
+  justify-content: space-evenly;
 }
-.C2body img{
+.C2body img {
   width: 100px;
   height: 100px;
   overflow: hidden;
   border-radius: 10px;
   border: #4340ff 3px dashed;
-  
 }
-
 
 /* ======================== */
 .C3 {
@@ -334,4 +369,49 @@ input {
 .vertical {
   width: 1px;
   background-color: #eee;
+}
+
+#modal-toggle {
+  display: none;
+}
+
+.modalBg {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #00000028;
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+}
+#modal-toggle:checked ~ .modalBg {
+  display: flex;
+}
+
+.modal {
+  background-color: #fff;
+  border: #333 2px solid;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.modalImg {
+  width: 400px;
+}
+.modal h2 {
+  width: 100%;
+  text-align: center;
+}
+.modal div {
+  width: 100%;
+  text-align: right;
+}
+.modal label {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: #333 1px dashed;
+  box-shadow: 0 0 7px;
 }

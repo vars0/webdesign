@@ -1,32 +1,54 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Document</title>
+  <title>CSS Modal</title>
+  <style>
+    /* 체크박스 숨기기 */
+    #modal-toggle {
+      display: none;
+    }
+
+    /* 배경 */
+    .modal-bg {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* 모달 */
+    .modal {
+      background: #fff;
+      padding: 20px;
+    }
+
+    /* 체크되면 모달 표시 */
+    #modal-toggle:checked + .modal-bg {
+      display: flex;
+    }
+  </style>
 </head>
 <body>
-  <div class="C1">
 
-  <!-- 탭 1 -->
-  <input type="radio" name="C1C2" id="tab1" checked hidden />
-  <label for="tab1" class="tab-label">
-    <h2>공지사항</h2>
+  <label for="modal-toggle" style="cursor:pointer;">
+    모달 열기
   </label>
-  <div class="Cbody">
-    <p>공지사항 내용</p>
-  </div>
 
-  <!-- 탭 2 -->
-  <input type="radio" name="C1C2" id="tab2" hidden />
-  <label for="tab2" class="tab-label">
-    <h2>이벤트</h2>
-  </label>
-  <div class="Cbody">
-    <p>이벤트 내용</p>
-  </div>
+  <input type="checkbox" id="modal-toggle">
 
-</div>
+  <!-- ✅ 모달 -->
+  <div class="modal-bg">
+    <div class="modal">
+      <p>모달 내용</p>
+      <!-- ✅ 닫기 버튼 -->
+      <label for="modal-toggle" style="cursor:pointer;">
+        닫기
+      </label>
+    </div>
+  </div>
 
 </body>
 </html>

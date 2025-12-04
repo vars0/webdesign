@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -10,39 +11,44 @@
   <body>
     <div class="header">
       <div class="headerSub">
-        <div class="logo"><img src="images/logo.jpg" alt="B세이프뱅크" /></div>
-        <div class="menu">
-          <div class="mainMenu">
-            <a href="#">홈</a>
-            <a href="#">개인뱅킹</a>
-            <a href="#">기업뱅킹</a>
-            <a href="#">커뮤니티</a>
+        <a href="#">
+          <div class="logo">
+            <img src="images/logo.jpg" alt="B세이프뱅크" />
           </div>
+        </a>
+        <div class="menu">
           <div class="subMenu">
-            <div>
+            <div id="Ms1">
               <a href="#">회사소개</a>
               <a href="#">경영진소개</a>
               <a href="#">사회적책임</a>
               <a href="#">역사&연혁</a>
             </div>
-            <div>
+            <div id="Ms2">
               <a href="#">계좌개설</a>
               <a href="#">대출상품</a>
               <a href="#">예금상품</a>
               <a href="#">카드서비스</a>
             </div>
-            <div>
+            <div id="Ms3">
               <a href="#">기업계좌</a>
               <a href="#">금융지원</a>
               <a href="#">결제서비스</a>
               <a href="#">컨설팅</a>
             </div>
-            <div>
+            <div id="Ms4">
               <a href="#">최신뉴스</a>
               <a href="#">공지사항</a>
               <a href="#">고객센터</a>
             </div>
           </div>
+          <div class="mainMenu">
+            <a id="M1" href="#">홈</a>
+            <a id="M2" href="#">개인뱅킹</a>
+            <a id="M3" href="#">기업뱅킹</a>
+            <a id="M4" href="#">커뮤니티</a>
+          </div>
+
           <div class="subMenuBack"></div>
         </div>
       </div>
@@ -60,9 +66,9 @@
         </label>
         <ul class="C1body Cbody">
           <li>
-            <a href="#"
-              >세이프뱅크 공지사항 1
-              <p>2025.05.25</p></a
+            <label for="modal-toggle" style="cursor: pointer">
+              세이프뱅크 공지사항 1
+              <p>2025.05.25</p></label
             >
           </li>
           <li>
@@ -96,12 +102,14 @@
       </div>
       <div class="C3">
         <h2>배너</h2>
-        <p>
-          <img src="images/banner.jpg" alt="은행이미지" />
-          세이프뱅크<br />
-          외화예금 신규가입 이벤트!!!!<br />
-          대상:세이프뱅크 개인고객<br />
-        </p>
+        <a href="#">
+          <p>
+            <img src="images/banner.jpg" alt="은행이미지" />
+            세이프뱅크<br />
+            외화예금 신규가입 이벤트!!!!<br />
+            대상:세이프뱅크 개인고객<br />
+          </p>
+        </a>
       </div>
       <div class="C4">
         <h2>바로가기</h2>
@@ -132,6 +140,20 @@
           <div class="coypright">
             COPYRIGHT © by WEB DESIGN DEVELOPMENT. ALL RIGHTS RESERVED.
           </div>
+        </div>
+      </div>
+    </div>
+    <input type="checkbox" id="modal-toggle" />
+    <div class="modalBg">
+      <div class="modal">
+        <h2>세이프뱅크 공지사항</h2>
+        <img src="images/pop.jpg" alt="dollar" class="modalImg" />
+        <p>
+          세이프뱅크 공지사항<br />
+          팝업창 내용입니다.
+        </p>
+        <div>
+          <label for="modal-toggle" style="cursor: pointer"> 닫기 </label>
         </div>
       </div>
     </div>
